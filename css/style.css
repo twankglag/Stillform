@@ -190,3 +190,157 @@ button {
     letter-spacing: 2px;
     color: var(--color-muted);
 }
+
+/* FEATURED PRODUCTS */
+
+.featured-products {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 60px 32px;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+}
+
+.section-heading p {
+    color: var(--color-muted);
+}
+
+
+/* PRODUCT GRID */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* PRODUCT CARDS */
+
+.product-card {
+    background-color: var(--color-surface);
+    padding: 20px;
+    border: 1px solid var(--color-border);
+}
+
+
+.product-image {
+    height: 220px;
+    background-color: #E6E0D7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--color-muted);
+    margin-bottom: 20px;
+}
+
+.product-category {
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product-price {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-link {
+    text-decoration: underline;
+}
+
+
+/* TABLET RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+        padding: 60px 24px;
+    }
+
+    .hero-content,
+    .hero-visual {
+        flex: none;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-visual {
+        min-height: 320px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-products {
+        padding: 50px 24px;
+    }
+}
+
+
+/* MOBILE RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .site-nav {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 48px 20px;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .hero-visual {
+        min-height: 260px;
+    }
+
+    .featured-products {
+        padding: 40px 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .product-card {
+        padding: 16px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+}
