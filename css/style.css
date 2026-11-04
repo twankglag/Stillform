@@ -357,6 +357,93 @@ button {
     max-width: 500px;
 }
 
+
+/* PRODUCT DETAILS PAGE */
+.product-page {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 50px 32px 90px;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--color-muted);
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.back-link:hover {
+    color: var(--color-text);
+}
+
+
+/* PRODUCT DETAIL LAYOUT */
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+
+/* PRODUCT IMAGE */
+.detail-image {
+    background-color: #E6E0D7;
+    min-height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-muted);
+}
+
+
+/* PRODUCT INFORMATION */
+.detail-info h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 12px 0 20px;
+}
+
+
+.detail-price {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+
+.detail-description {
+    color: var(--color-muted);
+    margin-bottom: 32px;
+}
+
+
+.detail-info h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+
+/* SPECIFICATIONS */
+.detail-specs {
+    list-style: none;
+    margin-bottom: 32px;
+}
+
+.detail-specs li {
+    padding: 12px 0px;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-muted);
+}
+
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+
 /* TABLET RESPONSIVE DESIGN */
 
 @media (max-width: 900px) {
@@ -395,6 +482,19 @@ button {
 
     .catalogue {
         padding: 60px 24px;
+    }
+
+    .product-page {
+        padding: 40px 24px 60px;
+    }
+
+    .product-detail {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .detail-image {
+        min-height: 360px;
     }
 }
 
@@ -475,5 +575,17 @@ button {
 
     .catalogue-heading h1 {
         font-size: 34px;
+    }
+
+    .product-page {
+        padding: 30px 20px 50px;
+    }
+
+    .detail-image {
+        min-height: 280px;
+    }
+
+    .detail-info h1 {
+        font-size: 32px;
     }
 }
