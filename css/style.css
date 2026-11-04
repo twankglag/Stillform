@@ -335,6 +335,28 @@ button {
 }
 
 
+/* PRODUCT CATALOGUE */
+.catalogue {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 70px 32px 90px;
+}
+
+.catalogue-heading {
+    margin-bottom: 40px;
+}
+
+.catalogue-heading h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.catalogue-heading > p:last-child {
+    color: var(--color-muted);
+    max-width: 500px;
+}
+
 /* TABLET RESPONSIVE DESIGN */
 
 @media (max-width: 900px) {
@@ -369,6 +391,10 @@ button {
 
     .footer-content {
         gap: 20px;
+    }
+
+    .catalogue {
+        padding: 60px 24px;
     }
 }
 
@@ -441,5 +467,13 @@ button {
     .footer-links {
         flex-wrap: wrap;
         gap: 16px;
+    }
+
+    .catalogue {
+        padding: 48px 20px 60px;
+    }
+
+    .catalogue-heading h1 {
+        font-size: 34px;
     }
 }
