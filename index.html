@@ -3,18 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Stillform</title>
+        <title>yummers</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header class="site-header">
-            <a href="index.html" class="logo">stillform</a>
+            <a href="index.html" class="logo">yummers</a>
 
             <nav class="site-nav" aria-label="Main navigation">
-                <a href="index.html">Home Page</a>
-                <a href="products.html">Shops</a>
-                <a href="product.html">Featured</a>
+                <a href="index.html">Home</a>
+                <a href="products.html">Shop</a>
+                <a href="index.html#our-story">Our Story</a>
             </nav>
         </header>
 
@@ -24,25 +27,24 @@
             <!-- Hero Section -->
             <section class="hero">
                 <div class="hero-content">
-                    <p class="eyebrow">WORKSPACE ESSENTIALS</p>
-                    <h1>Make room for better work.</h1>
+                    <h1>Life's sweeter with a little cake.</h1>
 
                     <p class="hero-description">
-                        Thoughtfully selected accessories
-                        designed to make your workspace
-                        more comfortable, functional and refined.
+                        Creamy cheesecakes, golden doughnuts and
+                        little moments worth treating yourself to.
                     </p>
 
                     <a href="products.html" class="button">
-                        Explore Collection
+                        Explore the Menu
                     </a>
                 </div>
 
-                <!-- Temporary Visual -->
                 <div class="hero-visual">
-                    <p class="visual-label">STILLFORM / 001</p>
-                    <div class="visual-product"></div>
-                    <p class="visual-caption">FORM MEETS FUNCTION</p>
+                    <img
+                        src="assets/images/nycheesecake.png"
+                        alt="Slice of New York cheesecake"
+                        class="hero-image"
+                    >
                 </div>
             </section>
 
@@ -50,8 +52,8 @@
             <section class="featured-products">
 
                 <div class="section-heading">
-                    <h2>Featured Products</h2>
-                    <p>Essentials for a better workspace.</p>
+                    <h2>The sweet favourites</h2>
+                    <p>A few favourites from our kitchen.</p>
                 </div>
                 
                 <div class="product-grid">
@@ -59,12 +61,14 @@
                     <!-- Product 1 -->
                      <article class="product-card">
                         <div class="product-image">
-                            Product Image
+                            <img src="assets/images/nycheesecake.png"
+                            alt="new york cheesecake"
+                            loading="lazy">
                         </div>
 
-                        <p class="product-category">KEYBOARDS</p>
-                        <h3>Mechanical Keyboard</h3>
-                        <p class="product-price">$129.00</p>
+                        <p class="product-category">Cheesecake</p>
+                        <h3>Classic New York Cheesecake</h3>
+                        <p class="product-price">$7.49 / slice</p>
 
                         <a href="product.html" class="product-link">
                             View Product
@@ -74,30 +78,30 @@
                      <!-- Product 2 -->
                     <article class="product-card">
                         <div class="product-image">
-                            Product Image
+                            <img src="assets/images/glazedonut.png">
                         </div>
 
-                        <p class="product-category">LIGHTING</p>
-                        <h3>Minimalist Desk Lamp</h3>
-                        <p class="product-price">$89.00</p>
+                        <p class="product-category">Doughnut</p>
+                        <h3>Classic Glazed Doughnut</h3>
+                        <p class="product-price">$4.99 / each</p>
 
                         <a href="product.html" class="product-link">
-                            View Product
+                            View details
                         </a>
                     </article>
 
                     <!-- Product 3 -->
                      <article class="product-card">
                         <div class="product-image">
-                            Product Image
+                            <img src="assets/images/bakedcreamycheesecake.png">
                         </div>
 
-                        <p class="product-category">MICE</p>
-                        <h3>Wireless Mouse</h3>
-                        <p class="product-price">$49.00</p>
+                        <p class="product-category">Cheesecake</p>
+                        <h3>Basque Burnt Cheesecake</h3>
+                        <p class="product-price">$8.49 / slice</p>
 
                         <a href="product.html" class="product-link">
-                            View Product
+                            View details
                         </a>
                      </article>
 
@@ -105,15 +109,14 @@
             </section>
 
             <!-- Brand Introduction -->
-             <section class="brand-section">
+             <section class="brand-section" id="our-story">
                 <div class="brand-content">
-                    <p class="eyebrow">THE STILLFORM PHILOSOPHY</p>
-                    <h2>Less clutter. More clarity.</h2>
+                    <p class="eyebrow">OUR PHILOSOPHY</p>
+                    <h2>Good things, made simply</h2>
                     <p>
-                        We believe that a thoughtful workspace
-                        makes everyday work better. Our collection
-                        brings together functional, minimalist
-                        accessories designed to last.
+                        Great desserts don't need to be complicated.
+                        We love familiar flavours, thoughtful details
+                        and the simple joy of sharing something sweet.
                     </p>
                 </div>
              </section>
@@ -121,19 +124,19 @@
         <footer class="site-footer">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo">stillform</a>
-                    <p>Designed for better workspaces.</p>
+                    <a href="index.html" class="logo">yummers</a>
+                    <p>A little joy in every bite.</p>
                 </div>
                 <nav class="footer-links" aria-label="Footer navigation">
                     <a href="index.html">Home</a>
                     <a href="products.html">Shop</a>
-                    <a href="product.html">Featured</a>
+                    <a href="index.html#our-story">Our Story</a>
                 </nav>
 
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 Stillform. All rights reserved.</p>
+                <p>&copy; 2026 yummers. All rights reserved.</p>
             </div>
         </footer>
     </body>
