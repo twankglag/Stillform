@@ -6,16 +6,27 @@ function renderCart() {
 
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+    if (cart.length === 0) {
+        const empty = document.createElement("p");
+        empty.classList.add("cart-empty");
+        empty.textContent = "Your cart is empty.";
+        cartItems.appendChild(empty);
+    }
+
     cart.forEach(function(product) {
         const item = document.createElement("div");
+        item.classList.add("cart-item");
 
         const name = document.createElement("h3");
         const quantity = document.createElement("p");
         const subtotal = document.createElement("p");
 
         const increaseButton = document.createElement("button");
+        increaseButton.classList.add("cart-quantity-button");
         const decreaseButton = document.createElement("button");
+        decreaseButton.classList.add("cart-quantity-button");
         const removeButton = document.createElement("button");
+        removeButton.classList.add("cart-remove-button");
 
         // Set the name's textContent
         name.textContent = product.name;
@@ -56,16 +67,27 @@ function renderCart() {
         });
 
         // Append all three elements to item
+        const controls = document.createElement("div");
+        controls.classList.add("cart-controls");
+
         item.appendChild(name);
         item.appendChild(quantity);
         item.appendChild(subtotal);
-        item.appendChild(increaseButton);
-        item.appendChild(decreaseButton);
-        item.appendChild(removeButton);
+        item.appendChild(controls);
+        controls.appendChild(increaseButton);
+        controls.appendChild(decreaseButton);
+        controls.appendChild(removeButton);
 
         // Append item to cartItems
         cartItems.appendChild(item);
     });
+
+    // Calculate total
+    const totalPrice = cart.reduce(function(total, product) {
+        return total + product.price * product.quantity;
+    }, 0);
+
+    cartTotal.textContent = "Total: $" + totalPrice.toFixed(2);
 }
 
 renderCart();
