@@ -1,5 +1,25 @@
 const button = document.querySelector("#add-to-cart");
 const feedback = document.querySelector("#cart-feedback");
+const summary = document.querySelector("#card-summary");
+const cartTotal = document.querySelector("#cart-total");
+
+function updateCartSummary() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const totalQuantity = cart.reduce(function(total, product) {
+        return total + product.quantity;
+    }, 0);
+
+    summary.textContent = "Items in cart: " + totalQuantity;
+
+    // Calculate the total price
+    const totalPrice = cart.reduce(function(total, product) {
+        return total + product.quantity * product.price; 
+    }, 0);
+
+    cartTotal.textContent = "Total: $" + totalPrice.toFixed(2);
+
+}
 
 button.addEventListener("click", function() {
     // Retrieve the existing cart
@@ -27,4 +47,8 @@ button.addEventListener("click", function() {
     localStorage.setItem("cart", JSON.stringify(cart));
     
     feedback.textContent = "Added to cart!";
+
+    updateCartSummary();
 });
+
+updateCartSummary();
