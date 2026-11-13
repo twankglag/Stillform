@@ -35,6 +35,25 @@
                     </p>
                  </header>
 
+                 <div class="catalogue-filters">
+                    <div class="catalogue-search">
+                        <label for="product-search">Search desserts</label>
+                        <input
+                            type="search"
+                            id="product-search"
+                            placeholder="Search for desserts...">
+                    </div>
+
+                    <div class="catalogue-category">
+                        <label for="category-filter">Category</label>
+                        <Select id="category-filter">
+                            <option value="all">All desserts</option>
+                            <option value="cheesecake">Cheesecakes</option>
+                            <option value="doughnut">Doughnuts</option>
+                        </Select>
+                    </div>
+                 </div>
+
                  <!-- All Products -->
                   <section aria-label="All products">
                     <div class="product-grid">
@@ -166,5 +185,6 @@
                 <p>&copy; 2026 yummers. All rights reserved.</p>
             </div>
         </footer>
+        <script src="js/products.js"></script>
     </body>
 </html>
